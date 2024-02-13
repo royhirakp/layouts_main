@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap"); */
 
 @tailwind base;
 @tailwind components;
@@ -23,6 +23,7 @@
 }
 
 body {
+  /* font-family: "Protest Revolution", sans-serif; */
   /* color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -46,7 +47,10 @@ img {
 #contactButtonFromLayout2,
 #jobOpeningButtonFromLayout2,
 .buttonForLayout3CourseCard,
-#layout3EnrollTodayButton {
+#layout3EnrollTodayButton,
+.submitButtonForlayout4,
+.selectCardButtonLayout4,
+.layout4button {
   background-color: #0b6476;
 }
 #contactButtonFromLayout2:hover,

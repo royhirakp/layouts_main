@@ -143,7 +143,7 @@ const LogoAndDetailsAndCourse = () => {
             // </Typography>
             <Link
               key={i}
-              href={`/newapp/${"jj"}`}
+              href={`${"#"}`}
               // style={{ textDecoration: "underline" }}
             >
               <Typography
@@ -189,11 +189,7 @@ const QuickLinkAndContacts = () => {
           { text: "Privacy Policy", route: "about" },
         ].map((item, i) => {
           return (
-            <Link
-              key={i}
-              href={`/newapp/${item.route}`}
-              style={{ textDecoration: "none" }}
-            >
+            <Link key={i} href={`#`} style={{ textDecoration: "none" }}>
               <Typography
                 variant="body2"
                 sx={{

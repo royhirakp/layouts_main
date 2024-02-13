@@ -3,19 +3,17 @@ import { Box, CssBaseline } from "@mui/material";
 import React from "react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-import { Poppins } from "next/font/google";
-
-const inter = Poppins({
+import { Lato } from "@next/font/google";
+const lato = Lato({
   subsets: ["latin"],
-  variable: "--font-poppins",
-  weight: "700",
+  weight: ["400"],
 });
 
 const ThemeProvidor = ({ children }) => {
   const theme = createTheme({
     breakpoints: {
       values: {
-        xs: 0, // Default value for xs
+        xs: 0,
         xxs: 367,
         xxxs: 470,
         swxs: 480,
@@ -33,22 +31,20 @@ const ThemeProvidor = ({ children }) => {
     },
     palette: {
       primary: {
-        main: "#004b87",
-        light: "rgba(101, 101, 101, 1)",
-        // dark: "#f6aeba",
+        main: "#203c52",
+        light: "rgb(106 99 99)",
       },
       secondary: {
-        main: "#404040",
-        light: "#0A56F180", //light blue
+        main: "#b54d4d", // light red
+        light: "#14766a80", //light
       },
       background: {
-        default: "#ffff",
-        // paper: "#fffafb",
+        default: "#dae9e780",
       },
     },
     typography: {
+      fontFamily: "inherit",
       body2: {
-        fontFamily: "Poppins",
         fontSize: "14px",
         fontWeight: 500,
         lineHeight: "22px",
@@ -67,7 +63,6 @@ const ThemeProvidor = ({ children }) => {
         },
       },
       body1: {
-        fontFamily: "Poppins",
         fontWeight: 500,
         fontSize: "16px",
 
@@ -90,7 +85,6 @@ const ThemeProvidor = ({ children }) => {
         },
       },
       subtitle2: {
-        fontFamily: "Poppins",
         fontSize: "18px",
         fontWeight: 600,
         lineHeight: "28px",
@@ -112,7 +106,6 @@ const ThemeProvidor = ({ children }) => {
         fontSize: "17px",
         lineHeight: "25px",
         fontWeight: 700,
-        fontFamily: "Poppins",
         color: "#000",
         "@media (min-width:600px)": {
           lineHeight: "25px",
@@ -129,7 +122,6 @@ const ThemeProvidor = ({ children }) => {
         },
       },
       h6: {
-        fontFamily: "Poppins",
         fontSize: "26px",
         fontWeight: 700,
         lineHeight: "35px",
@@ -147,7 +139,6 @@ const ThemeProvidor = ({ children }) => {
         },
       },
       h4: {
-        fontFamily: "Poppins",
         fontSize: "27px",
         fontWeight: 700,
         lineHeight: "35px",
@@ -165,7 +156,6 @@ const ThemeProvidor = ({ children }) => {
         },
       },
       h3: {
-        fontFamily: "Poppins",
         fontWeight: 800,
         fontSize: "30px",
         lineHeight: "30px",
@@ -187,7 +177,6 @@ const ThemeProvidor = ({ children }) => {
         },
       },
       caption: {
-        fontFamily: "Poppins",
         fontWeight: 500,
         fontSize: "12px",
         lineHeight: "19px",
@@ -205,9 +194,7 @@ const ThemeProvidor = ({ children }) => {
           fontSize: "14px",
         },
       },
-      // h5 is for tree node
       h5: {
-        fontFamily: "Poppins",
         fontWeight: 400,
         fontSize: "10px",
         lineHeight: "19px",
@@ -247,33 +234,26 @@ const ThemeProvidor = ({ children }) => {
           },
         },
       },
-      // MuiButton: {
-      //   styleOverrides: {
-      //     root: {
-      //       backgroundColor: "#476232",
-      //       padding: "10px 30px",
-      //       "&:hover": {
-      //         backgroundColor: "#2d3f20",
-      //       },
-      //       textTransform: "none",
-      //       color: "#ffff",
-      //     },
-      //   },
-      // },
+      MuiButton: {
+        styleOverrides: {
+          root: {
+            backgroundColor: "#476232",
+            padding: "10px 30px",
+            "&:hover": {
+              backgroundColor: "#2d3f20",
+            },
+            textTransform: "none",
+            color: "#ffff",
+          },
+        },
+      },
     },
   });
   return (
-    <Box>
+    <Box className={lato.className}>
       <ThemeProvider theme={theme}>
-        {/* <CssBaseline /> */}
-        <Box
-          sx={{
-            background: "#cfd9ff",
-          }}
-          className={`${inter.variable}`}
-        >
-          {children}
-        </Box>
+        <CssBaseline />
+        {children}
       </ThemeProvider>
     </Box>
   );

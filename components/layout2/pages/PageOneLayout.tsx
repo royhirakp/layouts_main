@@ -1,12 +1,10 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Box, Stack } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import PageOneContainer from "../container/PageOneContainer";
 import Header from "../components/PageOneComonents.tsx/Header";
 import Footer from "../components/PageOneComonents.tsx/Footer";
 import ThemeProvider from "../components/theme/ThemeProvidor";
-import { Inter } from "next/font/google";
-const inter = Inter({ subsets: ["latin"] });
 
 const PageOneLayout = ({ children }: { children: any }) => {
   const [scrollStartStatus, setScrollStartStatus] = useState<Boolean>(false);
@@ -31,7 +29,6 @@ const PageOneLayout = ({ children }: { children: any }) => {
       sx={{
         position: "relative",
       }}
-      className={inter.className}
     >
       {/* animation */}
       {/* <ScrollRegister /> */}

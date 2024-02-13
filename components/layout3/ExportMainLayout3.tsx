@@ -4,10 +4,6 @@ import Hero from "./components/home/Hero";
 import Course from "./components/home/Course";
 import OurFeaturs from "./components/home/OurFeaturs";
 import StartJourney from "./components/home/StartJourney";
-import ThemeProvidor from "./themeProvidor/ThemeProvidor";
-import Header from "./components/home/Header";
-import Footer from "./components/home/Footer";
-import PageLayoutWithHeaderandFooter from "./PageLayoutWithHeaderandFooter";
 
 const ExportMainLayout3 = () => {
   return (

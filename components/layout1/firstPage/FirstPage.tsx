@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from "react";
 import PageHeader from "./parts/Header/PageHeader";
 import FooterPart from "./parts/Footer/FooterPart";
+// import { Inter } from "next/font/google";
+// const inter = Inter({ subsets: ["vietnamese"] });
 
 const FirstPage = ({ children }: { children: React.ReactNode }) => {
   const [activeButton, setActiveButton] = useState(false);
@@ -24,7 +26,7 @@ const FirstPage = ({ children }: { children: React.ReactNode }) => {
   }, []);
   return (
     <div
-      className=""
+      // className={inter.className}
       style={{
         minHeight: "100vh",
         display: "flex",

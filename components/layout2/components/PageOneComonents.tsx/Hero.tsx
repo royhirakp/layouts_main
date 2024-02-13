@@ -34,7 +34,11 @@ const Hero = () => {
 };
 
 export default Hero;
-
+import { Dancing_Script } from "@next/font/google";
+const dancing_Script = Dancing_Script({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 const TextContent = () => {
   return (
     <Stack
@@ -67,6 +71,7 @@ const TextContent = () => {
       </Typography>
       <Typography
         // className="left-animate"
+        className={dancing_Script.className}
         // data-scroll
         color="#6b6b6b"
         sx={{
@@ -87,7 +92,6 @@ const TextContent = () => {
             sm: "37.5px",
           },
 
-          fontFamily: "Poppins",
           textAlign: {
             xs: "center",
             md: "initial",

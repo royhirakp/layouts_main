@@ -62,23 +62,23 @@ const TwoCardsColumnSlider = () => {
       >
         {[
           {
-            step: "Step 1",
+            step: "Step I",
             title: "Lorem ipsum dolor sit amet.",
             data: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi ducimus eum quisquam hic deleniti quasi illum aliquid itaque quaerat dicta, aperiam saepe nisi rem nulla.
   `,
           },
           {
-            step: "Step 2",
+            step: "Step II",
             title: "Lorem ipsum dolor sit amet.",
             data: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi ducimus eum quisquam hic deleniti quasi illum aliquid itaque quaerat dicta, aperiam saepe nisi rem nulla.`,
           },
           {
-            step: "Step 3",
+            step: "Step III",
             title: "Lorem ipsum dolor sit amet.",
             data: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi ducimus eum quisquam hic deleniti quasi illum aliquid itaque quaerat dicta, aperiam saepe nisi rem nulla.`,
           },
           {
-            step: "Step 4",
+            step: "Step IV",
             title: "Lorem ipsum dolor sit amet.",
             data: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi ducimus eum quisquam hic deleniti quasi illum aliquid itaque quaerat dicta, aperiam saepe nisi rem nulla.`,
           },

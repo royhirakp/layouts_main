@@ -104,16 +104,16 @@ const ListINthepart = () => {
         position: "absolute",
 
         top: {
-          xs: "172px",
-          sm: "172px",
-          md: "166px",
-          lg: "175px",
+          xs: "170px",
+          sm: "170px",
+          md: "165px",
+          lg: "172px",
         },
         right: {
-          xs: "70px",
-          sm: "35px",
-          md: "32px",
-          lg: "-55px",
+          xs: "82px",
+          sm: "50px",
+          md: "49px",
+          lg: "-30px",
         },
       }}
     >
