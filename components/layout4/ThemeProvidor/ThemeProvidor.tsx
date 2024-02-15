@@ -6,10 +6,7 @@ interface ContainerProps {
   children: ReactNode;
 }
 import { Lato, Dancing_Script } from "@next/font/google";
-const dancing_Script = Dancing_Script({
-  subsets: ["latin"],
-  weight: ["400"],
-});
+
 const lato = Lato({
   subsets: ["latin"],
   weight: ["400"],
@@ -161,7 +158,7 @@ const ThemeProvidor: React.FC<ContainerProps> = ({ children }) => {
   return (
     <Box
       className={`
-      ${lato.className} ${dancing_Script.className}
+      ${lato.className}
     `}
     >
       <ThemeProvider theme={theme}>
