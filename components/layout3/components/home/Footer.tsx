@@ -46,7 +46,7 @@ const Footer = () => {
 
           <Divider sx={{ backgroundColor: "secondary.light", marginTop: 4 }} />
           <Typography variant="body2" textAlign="center" pt={3} pb={2}>
-            Copyright © 2023 GPFTPSC online | Design and Developed by
+            Copyright © 2023 online | Design and Developed by COMPANY NAME
           </Typography>
         </HeaderContainer>
       </Box>
@@ -101,7 +101,7 @@ const LogoAndDetailsAndCourse = () => {
             },
           ].map((item, i) => {
             return (
-              <Link href="face" style={{ textDecoration: "none" }} key={i}>
+              <Link href="##" style={{ textDecoration: "none" }} key={i}>
                 <Box
                   sx={{
                     display: "flex",

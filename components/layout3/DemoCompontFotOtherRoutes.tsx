@@ -7,6 +7,7 @@ const DemoCompontFotOtherRoutes = ({ routeName }: { routeName: string }) => {
       style={{
         padding: "170px 0 130px 0",
         textAlign: "center",
+        fontSize: "47px",
       }}
     >
       {routeName}

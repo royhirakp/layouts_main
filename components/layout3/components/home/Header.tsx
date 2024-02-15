@@ -8,7 +8,6 @@ import LoginButtonAndUserProfile from "./HeaderParts/LoginButtonAndUserProfile";
 import Draweerr from "./HeaderParts/Draweerr";
 import ButtonNavigation from "./HeaderParts/ButtonNavigation";
 import HeaderContainer from "../../container/HeaderContainer";
-// import HeaderContainer from "@/container/HeaderContainer";
 type Anchor = "top" | "left" | "bottom" | "right";
 
 const Header = () => {

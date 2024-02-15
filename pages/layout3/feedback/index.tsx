@@ -6,7 +6,7 @@ const index = () => {
   return (
     <div>
       <PageLayoutWithHeaderandFooter>
-        <DemoCompontFotOtherRoutes routeName="Profile Route" />
+        <DemoCompontFotOtherRoutes routeName="Feedback Route" />
       </PageLayoutWithHeaderandFooter>
     </div>
   );

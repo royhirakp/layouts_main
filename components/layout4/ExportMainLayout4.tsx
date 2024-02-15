@@ -55,7 +55,7 @@ type Inputs = {
   checkboxStatus: Boolean;
   signatureIsPresent: Boolean;
   BrideSignature: string; //signature
-  GroomSignature: string; ////signature
+  GroomSignature: string;
 };
 import { useForm } from "react-hook-form";
 import Haldi from "./components/home/Haldi";
@@ -190,9 +190,6 @@ const ExportMainLayout4 = () => {
       setopenSingAndTandC_warnning(true);
       return;
     }
-
-    // if the signature , bride and groom details empty
-    //  the checkbox not true it will return
 
     if (
       watch("brideName") === "" ||

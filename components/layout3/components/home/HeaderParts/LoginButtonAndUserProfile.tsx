@@ -4,6 +4,7 @@ import { Avatar, Box, Button, Stack, Typography } from "@mui/material";
 import { useRouter } from "next/navigation";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 const LoginButtonAndUserProfile = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -36,15 +37,27 @@ const LoginButtonAndUserProfile = () => {
               />
             }
             endIcon={
-              <KeyboardArrowDownIcon
-                sx={{
-                  display: {
-                    xs: "none",
-                    md: "block",
-                  },
-                  color: "secondary.light",
-                }}
-              />
+              !anchorEl ? (
+                <KeyboardArrowUpIcon
+                  sx={{
+                    display: {
+                      xs: "none",
+                      md: "block",
+                    },
+                    color: "secondary.light",
+                  }}
+                />
+              ) : (
+                <KeyboardArrowDownIcon
+                  sx={{
+                    display: {
+                      xs: "none",
+                      md: "block",
+                    },
+                    color: "secondary.light",
+                  }}
+                />
+              )
             }
           >
             <Typography
@@ -90,7 +103,7 @@ const LoginButtonAndUserProfile = () => {
               onClick={() => {
                 localStorage.removeItem("loginStatus");
                 setAnchorEl(null);
-                router.push("/login");
+                router.push("/layout3/login");
               }}
             >
               Logout

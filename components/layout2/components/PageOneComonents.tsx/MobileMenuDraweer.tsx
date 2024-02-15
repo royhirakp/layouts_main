@@ -29,7 +29,7 @@ import HelpCenterIcon from "@mui/icons-material/HelpCenter";
 import MessageIcon from "@mui/icons-material/Message";
 import { useRouter } from "next/router";
 
-const Draweerr = ({
+const MobileMenuDraweer = ({
   toggleDrawer,
   state,
 }: {
@@ -57,12 +57,13 @@ const Draweerr = ({
               display: "flex",
               justifyContent: "center",
               cursor: "pointer",
+              margin: "auto",
             }}
           >
             <Image
-              src="/dataforLayout3/logo.png"
+              src="/dataForLayout2/logo.png"
               alt="logo"
-              width={40}
+              width={80}
               height={40}
             />
           </Box>
@@ -75,10 +76,6 @@ const Draweerr = ({
         <Divider />
         <ListOfMenu setActiveState={setActiveState} activeList={activeList} />
         <Divider />
-        <HelpAndFeedBack
-          setActiveState={setActiveState}
-          activeList={activeList}
-        />
       </div>
       {/* logout button */}
       <Stack
@@ -111,7 +108,7 @@ const Draweerr = ({
   );
 };
 
-export default Draweerr;
+export default MobileMenuDraweer;
 
 const LoginPartForMobileDrawer = () => {
   return (
@@ -234,9 +231,6 @@ const HelpAndFeedBack = ({
                   : "#ffff"
               }`,
             }}
-            // sx={{
-            //   background: "#ff7f7f",
-            // }}
           >
             <ListItemButton>
               <ListItemIcon>{text?.icon}</ListItemIcon>
@@ -280,45 +274,32 @@ const ListOfMenu = ({
           path: "about",
         },
         {
-          name: "Study Meterial",
-          icon: <GradingIcon sx={{ color: "primary.main" }} />,
-          path: "studyMeterial",
-        },
-        {
-          name: "Courses",
-          icon: <LocalTaxiIcon sx={{ color: "primary.main" }} />,
-          path: "courses",
-        },
-        {
-          name: "Contacts",
+          name: "Service",
           icon: <HolidayVillageIcon sx={{ color: "primary.main" }} />,
-          path: "contacts",
+          path: "service",
         },
         {
-          name: "Classroom",
+          name: "Portfolio",
+          icon: <GradingIcon sx={{ color: "primary.main" }} />,
+          path: "portfolio",
+        },
+
+        {
+          name: "Blog",
           icon: <BookIcon sx={{ color: "primary.main" }} />,
-          path: "classroom",
+          path: "blog",
         },
         // "contact",
       ].map((text, index) => (
         <Link
-          href={`/layout3/${text?.path}`}
+          href={`/layout2/${text?.path}`}
           key={index}
           style={{ textDecoration: "none" }}
           onClick={() => {
             setActiveState(index);
           }}
         >
-          <ListItem
-            disablePadding
-            sx={{
-              backgroundColor: `${
-                route.pathname == `/layout3/${text?.path}`
-                  ? "secondary.main"
-                  : "secondary.light"
-              }`,
-            }}
-          >
+          <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon sx={{ color: "#fffff" }}>{text?.icon}</ListItemIcon>
               <Typography
@@ -326,7 +307,7 @@ const ListOfMenu = ({
                 sx={{
                   // color: "secondary.main",
                   color: `${
-                    route.pathname == `/layout3/${text?.path}`
+                    route.pathname == `/layout2/${text?.path}`
                       ? "secondary.light"
                       : "secondary.main"
                   }`,
