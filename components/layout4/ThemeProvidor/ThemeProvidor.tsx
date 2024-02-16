@@ -17,32 +17,32 @@ const ThemeProvidor: React.FC<ContainerProps> = ({ children }) => {
       fontFamily: "inherit",
       subtitle1: {
         color: "#6c032e",
-        fontSize: "1.3rem",
+        fontSize: "0.9rem",
         fontWeight: 700,
         "@media (min-width:600px)": {
-          fontSize: "1.3rem",
+          fontSize: "0.9rem",
         },
         "@media (min-width:960px)": {
-          fontSize: "1.5rem",
+          fontSize: "1rem",
         },
         "@media (min-width:1280px)": {
-          fontSize: "1.5rem",
+          fontSize: "1.1rem",
         },
       },
       h5: {
         color: "#cd0000",
         textDecoration: "underline",
         marginBottom: "0.5rem",
-        fontSize: "1.7rem",
+        fontSize: "1rem",
         fontWeight: 700,
         "@media (min-width:600px)": {
-          fontSize: "1.7rem",
+          fontSize: "1rem",
         },
         "@media (min-width:960px)": {
-          fontSize: "1.9rem",
+          fontSize: "1.1rem",
         },
         "@media (min-width:1280px)": {
-          fontSize: "2rem",
+          fontSize: "1.2rem",
         },
       },
     },
@@ -123,7 +123,7 @@ const ThemeProvidor: React.FC<ContainerProps> = ({ children }) => {
 
             ".MuiInputBase-root": {
               fontSize: "20px",
-              height: "45px",
+              height: "40px",
             },
             fieldset: {
               border: "1px solid #437C17",

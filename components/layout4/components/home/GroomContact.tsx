@@ -8,25 +8,24 @@ const GroomContact = ({ register, errors }: { register: any; errors: any }) => {
   return (
     <>
       <Box pt={1}>
-        <Typography variant="h5" pl={1} pb={2} fontWeight={700}>
+        <Typography variant="h5" pl={1} fontWeight={700}>
           Bor Contact:
         </Typography>
 
         <Stack
-          pb={2}
           sx={{
             flexDirection: {
               xs: "column",
               sm: "row",
             },
           }}
+          pb={1}
           pr={1}
           pl={1}
-          // pt={1}
           gap={2}
         >
           <Box width="100%">
-            <Typography pb={1} variant="subtitle1">
+            <Typography variant="subtitle1" pb={1}>
               Name :
             </Typography>
             <Box>
@@ -42,7 +41,7 @@ const GroomContact = ({ register, errors }: { register: any; errors: any }) => {
             </Box>
           </Box>
           <Box width="100%">
-            <Typography pb={1} variant="subtitle1">
+            <Typography variant="subtitle1" pb={1}>
               Address:
             </Typography>
             <Box>
@@ -66,11 +65,10 @@ const GroomContact = ({ register, errors }: { register: any; errors: any }) => {
           }}
           pr={1}
           pl={1}
-          // pt={1}
           gap={2}
         >
           <Box width="100%">
-            <Typography pb={1} variant="subtitle1">
+            <Typography variant="subtitle1" pb={1}>
               Email :
             </Typography>
             <Box>
@@ -86,7 +84,7 @@ const GroomContact = ({ register, errors }: { register: any; errors: any }) => {
             </Box>
           </Box>
           <Box width="100%">
-            <Typography pb={1} variant="subtitle1">
+            <Typography variant="subtitle1" pb={1}>
               Mobile No :
             </Typography>
             <Box>

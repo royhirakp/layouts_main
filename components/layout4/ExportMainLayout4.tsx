@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 import ThemeProvidor from "./ThemeProvidor/ThemeProvidor";
-import { Box, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import HomeContainer from "./container/HomeContainer";
 import ThankYou from "./components/home/ThankYou";
 import AlartMessege from "./components/home/AlartMessege";
@@ -85,7 +85,7 @@ const ExportMainLayout4 = () => {
       if (!watch(name)) {
         setError(name, {
           type: "manual",
-          message: `please give your ${name}`,
+          message: `${name}`,
         });
       } else {
         clearErrors(name);
@@ -132,7 +132,6 @@ const ExportMainLayout4 = () => {
         engagementDate: watch("engagementDate") || "",
         weadingDate: watch("weadingDate") || "",
         bidayOrBaronDate: watch("BidayOrBaronDate") || "",
-        signature: { name: "RSS", url: "https://agile-rule.name/" },
         receptionDate: watch("receptionDate") || "",
         nameOfThePackege: {
           title: watch("nameOfThePackege").title || "",
@@ -153,6 +152,7 @@ const ExportMainLayout4 = () => {
         haldiBrideDate: watch("haldiBrideDate") || "",
         haldiDate: watch("haldiDate") || "",
         haldiGroomDate: watch("haldiGroomDate") || "",
+        signature: watch("BrideSignature") || "",
       };
       formData.append("data", JSON.stringify(userData));
       if (!watch("GroomSignature")) {
@@ -160,15 +160,16 @@ const ExportMainLayout4 = () => {
       } else {
         formData.append("signature", watch("GroomSignature"));
       }
+      console.log("data as user Data=", userData);
+      console.log("data as From Data=", formData);
 
       setPostSucessThankYou(true);
       setTimeout(() => {
         setPostSucessThankYou(false);
         alert(JSON.stringify(userData));
-        window.location.reload();
+        // window.location.reload();
       }, 1000);
     } catch (error) {
-      // console.log("POST ERROR: ", error);
       setApicallErrorStatus(true);
       setTimeout(() => {
         setApicallErrorStatus(false);
@@ -201,12 +202,10 @@ const ExportMainLayout4 = () => {
       watch("groomAddress") === "" ||
       watch("groomPhone") === ""
     ) {
+      // alert("please fill all required ");
       return;
     }
     apiCall();
-    console.log(data);
-
-    console.log("============API CALL START", watch());
   };
   useEffect(() => {
     //set todays date in the data and show to the fnd
@@ -241,7 +240,7 @@ const ExportMainLayout4 = () => {
             clearErrors={clearErrors}
           />
 
-          <Box pt={1} pb={8}>
+          <Box pt={1} pb={3}>
             <Asirbad
               watch={watch}
               setValue={setValue}
@@ -250,7 +249,7 @@ const ExportMainLayout4 = () => {
             />
           </Box>
 
-          <Box pt={3} pb={6}>
+          <Box pt={3} pb={3}>
             <WeadingBidayResaptionEngementDateInput
               errors={errors}
               setValue={setValue}
@@ -308,6 +307,8 @@ const ExportMainLayout4 = () => {
             setT_and_c_ckeckboxStacus={setT_and_c_ckeckboxStacus}
             setopenSingAndTandC_warnning={setopenSingAndTandC_warnning}
           />
+          {Object.keys(errors).length !== 0 && <ErrorMessege errors={errors} />}
+
           <SubmitButton loaderState={loaderState} />
         </form>
         <FooterCopyright />
@@ -317,6 +318,37 @@ const ExportMainLayout4 = () => {
 };
 
 export default ExportMainLayout4;
+
+const ErrorMessege = ({ errors }: { errors: any }) => {
+  return (
+    <Stack
+      direction="row"
+      flexWrap="wrap"
+      p={1}
+      gap={1}
+      sx={{
+        background: "red",
+        borderRadius: "5px",
+        color: "#FFFF",
+      }}
+    >
+      <strong>Errors in :</strong>
+      {errors.BidayOrBaronDate && <p>{errors.BidayOrBaronDate.message}</p>}
+      {errors.engagementDate && <p>{errors.engagementDate.message}</p>}
+      {errors.nameOfThePackege && <p>{errors.nameOfThePackege.message}</p>}
+      {errors.receptionDate && <p>{errors.receptionDate.message}</p>}
+      {errors.weadingDate && <p>{errors.weadingDate.message}</p>}
+      {errors.brideEmail && <p>{errors.brideEmail.message}</p>}
+      {errors.brideAddress && <p>{errors.brideAddress.message}</p>}
+      {errors.brideName && <p>{errors.brideName.message}</p>}
+      {errors.bridePhone && <p>{errors.bridePhone.message}</p>}
+      {errors.groomAddress && <p>{errors.groomAddress.message}</p>}
+      {errors.groomEmail && <p>{errors.groomEmail.message}</p>}
+      {errors.groomName && <p>{errors.groomName.message}</p>}
+      {errors.groomPhone && <p>{errors.groomPhone.message}</p>}
+    </Stack>
+  );
+};
 
 const WebsiteLOGONotificationAlart = ({
   postSucessThankYou,

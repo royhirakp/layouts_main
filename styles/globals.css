@@ -59,6 +59,9 @@ img {
   background-color: #1a3439;
 }
 
+.layout4CardButton {
+  background: rgb(122, 120, 220);
+}
 .layout1HeaderNavLink {
   position: relative;
 }
