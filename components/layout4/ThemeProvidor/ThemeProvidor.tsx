@@ -94,6 +94,7 @@ const ThemeProvidor: React.FC<ContainerProps> = ({ children }) => {
         styleOverrides: {
           root: {
             padding: "0px",
+            height: "40px",
             "@media (min-width:600px)": {
               fontSize: "15px",
             },
@@ -135,6 +136,7 @@ const ThemeProvidor: React.FC<ContainerProps> = ({ children }) => {
       MuiMenuItem: {
         styleOverrides: {
           root: {
+            height: "22px",
             padding: "0 0 0 12px",
             position: "relative",
             top: 0,

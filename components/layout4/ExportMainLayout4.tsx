@@ -239,14 +239,12 @@ const ExportMainLayout4 = () => {
             setValue={setValue}
             clearErrors={clearErrors}
           />
-
-          <Box pt={1} pb={3}>
-            <Asirbad
-              watch={watch}
-              setValue={setValue}
-              errors={errors}
-              clearErrors={clearErrors}
-            />
+          {/* contact deatils */}
+          <Box pt={3} pb={3}>
+            <BrideContact register={register} errors={errors} />
+          </Box>
+          <Box pt={3} pb={3}>
+            <GroomContact register={register} errors={errors} />
           </Box>
 
           <Box pt={3} pb={3}>
@@ -271,15 +269,14 @@ const ExportMainLayout4 = () => {
               clearErrors={clearErrors}
             />
           </Box>
-
-          {/* contact deatils */}
-          <Box pt={3} pb={3}>
-            <BrideContact register={register} errors={errors} />
+          <Box pt={1} pb={3}>
+            <Asirbad
+              watch={watch}
+              setValue={setValue}
+              errors={errors}
+              clearErrors={clearErrors}
+            />
           </Box>
-          <Box pt={3} pb={3}>
-            <GroomContact register={register} errors={errors} />
-          </Box>
-
           <Box pt={5} pb={3}>
             <AnyThingExtraComponent register={register} />
           </Box>

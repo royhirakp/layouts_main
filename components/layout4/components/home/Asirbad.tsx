@@ -17,7 +17,7 @@ const Asirbad = ({
   return (
     <Stack pl={1} pr={1} pt={2} sx={{ width: "100%" }}>
       <Typography pb={1} variant="h5">
-        Asirbad :
+        Asirbad er Date:
       </Typography>
       <Stack
         sx={{
