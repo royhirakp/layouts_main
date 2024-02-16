@@ -115,10 +115,11 @@ const rows = [
       `,
       description: `
       Upon successful form submission, the component show a popup to show
-      that the from has submitted successfully, then the submitted data
-      will show in the alert message . The server response is handled to
-      display success or error messages. The form includes a loader to
-      indicate ongoing submission.
+      that the from has submitted successfully, The user fills out the form, 
+      and upon submission, the data is displayed in the console as well as in an 
+      alert. The signature and terms and conditions are mandatory fields; if not 
+      provided, an error popup will appear upon form submission. All error messages 
+      will be visible on the webpage.
       `,
     }
   ),
@@ -157,10 +158,11 @@ const rows = [
     {
       title: "Basic layout (MUI)",
       Overview: `      
-      This project is a mobile-responsive web application built using Material UI, featuring a sleek and intuitive design. The app leverages the power of Slider JS for an interactive card display on mobile devices, providing an engaging and seamless user experience. The entire application is themed with Material UI to ensure a modern and consistent look and feel.
+      This project is a mobile-responsive web application built using Material UI, modern website design.
       `,
       description: `
-      The Material UI Responsive Mobile Web App is a cutting-edge project designed with a mobile-first approach, featuring a dynamic and responsive layout. Utilizing Slider JS for an engaging card display on mobile devices, the application ensures a seamless and interactive user experience. Themed with Material UI, it boasts a modern and cohesive design across components, providing a visually appealing and user-friendly interface. The app's adaptability to various screen sizes, coupled with its intuitive card navigation, makes it an ideal choice for creating stylish and functional mobile web applications.
+      
+My project utilizes Next.js and Material-UI to create a dynamic and visually appealing web application. , I've crafted an intuitive and responsive webpage layout.
       `,
     }
   ),
