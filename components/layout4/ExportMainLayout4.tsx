@@ -317,33 +317,39 @@ const ExportMainLayout4 = () => {
 export default ExportMainLayout4;
 
 const ErrorMessege = ({ errors }: { errors: any }) => {
+  // console.log(errors);
   return (
-    <Stack
-      direction="row"
-      flexWrap="wrap"
-      p={1}
-      gap={1}
-      sx={{
-        background: "red",
-        borderRadius: "5px",
-        color: "#FFFF",
-      }}
-    >
-      <strong>Errors in :</strong>
-      {errors.BidayOrBaronDate && <p>{errors.BidayOrBaronDate.message}</p>}
-      {errors.engagementDate && <p>{errors.engagementDate.message}</p>}
-      {errors.nameOfThePackege && <p>{errors.nameOfThePackege.message}</p>}
-      {errors.receptionDate && <p>{errors.receptionDate.message}</p>}
-      {errors.weadingDate && <p>{errors.weadingDate.message}</p>}
-      {errors.brideEmail && <p>{errors.brideEmail.message}</p>}
-      {errors.brideAddress && <p>{errors.brideAddress.message}</p>}
-      {errors.brideName && <p>{errors.brideName.message}</p>}
-      {errors.bridePhone && <p>{errors.bridePhone.message}</p>}
-      {errors.groomAddress && <p>{errors.groomAddress.message}</p>}
-      {errors.groomEmail && <p>{errors.groomEmail.message}</p>}
-      {errors.groomName && <p>{errors.groomName.message}</p>}
-      {errors.groomPhone && <p>{errors.groomPhone.message}</p>}
-    </Stack>
+    <>
+      <br />
+      <strong>No of totel errors: {Object.keys(errors).length}</strong>
+      <br />
+      <Stack
+        direction="row"
+        flexWrap="wrap"
+        p={1}
+        gap={1}
+        sx={{
+          background: "red",
+          borderRadius: "5px",
+          color: "#FFFF",
+        }}
+      >
+        <strong>Errors in :</strong>
+        {errors.BidayOrBaronDate && <p>{errors.BidayOrBaronDate.message}</p>}
+        {errors.engagementDate && <p>{errors.engagementDate.message}</p>}
+        {errors.nameOfThePackege && <p>{errors.nameOfThePackege.message}</p>}
+        {errors.receptionDate && <p>{errors.receptionDate.message}</p>}
+        {errors.weadingDate && <p>{errors.weadingDate.message}</p>}
+        {errors.brideEmail && <p>Bouer email</p>}
+        {errors.brideAddress && <p>bouer contact address</p>}
+        {errors.brideName && <p>bouer name</p>}
+        {errors.bridePhone && <p>Bouer phone</p>}
+        {errors.groomAddress && <p>Bor Contact address</p>}
+        {errors.groomEmail && <p>Bor email</p>}
+        {errors.groomName && <p>bor name</p>}
+        {errors.groomPhone && <p>borPhone</p>}
+      </Stack>
+    </>
   );
 };
 
